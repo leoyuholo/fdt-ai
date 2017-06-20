@@ -15,7 +15,8 @@ const file = chaiFiles.file;
 const realizedProfit = require('../lib/realizedProfit');
 
 describe('lib', () => {
-	describe('realizedProfit', () => {
+	describe('realizedProfit', function () {
+		this.timeout(100000);
 		describe('testcases', () => {
 			const testcases = fs.readdirSync(path.join(__dirname, '../testcases'));
 			testcases.forEach((dirName) => {
@@ -34,9 +35,8 @@ describe('lib', () => {
 			});
 		});
 
-		describe.skip('random testing', function () {
-			this.timeout(100000);
-			it('should generate random test case', function () {
+		describe.skip('random testing', () => {
+			it('should generate random test case', () => {
 				const generateTestcase = (stream) => {
 					let numberOfOrders = _.random(1, 100) * _.random(1, 100) * _.random(1, 100);
 					const buySell = ['Buy', 'Sell'];
@@ -46,7 +46,7 @@ describe('lib', () => {
 					let cnt = 1;
 					let dt = Date.now() - 10000000;
 					while (numberOfOrders > 0) {
-						numberOfOrders--;
+						numberOfOrders -= 1;
 						dt += _.random(0, 10000);
 						const trader = _.random(1, 100);
 						const stkCode = _.random(1, 200);
@@ -55,11 +55,12 @@ describe('lib', () => {
 						const type = buySell[_.random(0, 1)];
 						const fee = qty * price * _.random(0, 0.01, true);
 						const ts = moment(dt).format('YYYY-MM-DD hh:mm:ss');
-						stream.write(`${cnt++}\t${trader}\t${stkCode}\t${qty}\t${price}\t${type}\t${fee}\t${ts}\n`);
+						stream.write(`${cnt}\t${trader}\t${stkCode}\t${qty}\t${price}\t${type}\t${fee}\t${ts}\n`);
+						cnt += 1;
 					}
 					if (stream !== process.stdout)
 						stream.end();
-				}
+				};
 
 				generateTestcase(process.stdout);
 			});

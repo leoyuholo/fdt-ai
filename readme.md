@@ -1,7 +1,7 @@
 # FDT AI coding test
 
 ## Requirement
-Need (Node.js)[https://nodejs.org/en/] to be installed.
+Need [Node.js](https://nodejs.org/en/) to be installed.
 
 ## Usage
 Run `npm install` or `yarn` to install dependencies first.

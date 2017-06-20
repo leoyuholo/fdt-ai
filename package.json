@@ -2,7 +2,7 @@
   "name": "fdt-ai-coding-test",
   "description": "FDT AI coding test for software engineer",
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "nodemon index.js -- -i testcases/0/in",
     "lint": "eslint lib test",
     "test": "mocha",
     "test-watch": "nodemon --exec npm run test --watch .",

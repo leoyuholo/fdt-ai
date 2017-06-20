@@ -55,4 +55,5 @@ You can utilize the scripts in `package.json` to further develop this project.
 - To run test, run `npm run test`.
 - To lint code, run `npm run lint`.
 - To run coverage, run `npm run coverage` and check the generated `coverage/lcov-report` directory.
+- To watch file changes and restart automatically, run `npm run dev`
 - To watch file changes and run test automatically, run `npm run test-watch`

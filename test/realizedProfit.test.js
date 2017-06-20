@@ -35,12 +35,13 @@ describe('lib', () => {
 		});
 
 		describe.skip('random testing', function () {
+			this.timeout(100000);
 			it('should generate random test case', function () {
-				const testGenerator = () => {
+				const generateTestcase = (stream) => {
 					let numberOfOrders = _.random(1, 100) * _.random(1, 100) * _.random(1, 100);
 					const buySell = ['Buy', 'Sell'];
 
-					console.log('OrderId\tTrader\tStkCode\tQuantity\tPrice\tTradeType\tFee	Timestamp');
+					stream.write('OrderId\tTrader\tStkCode\tQuantity\tPrice\tTradeType\tFee	Timestamp\n');
 
 					let cnt = 1;
 					let dt = Date.now() - 10000000;
@@ -54,11 +55,13 @@ describe('lib', () => {
 						const type = buySell[_.random(0, 1)];
 						const fee = qty * price * _.random(0, 0.01, true);
 						const ts = moment(dt).format('YYYY-MM-DD hh:mm:ss');
-						console.log(`${cnt++}\t${trader}\t${stkCode}\t${qty}\t${price}\t${type}\t${fee}\t${ts}`);
+						stream.write(`${cnt++}\t${trader}\t${stkCode}\t${qty}\t${price}\t${type}\t${fee}\t${ts}\n`);
 					}
+					if (stream !== process.stdout)
+						stream.end();
 				}
 
-				testGenerator();
+				generateTestcase(process.stdout);
 			});
 		});
 	});

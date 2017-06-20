@@ -4,10 +4,10 @@ chai.should();
 
 const Trader = require('../lib/Trader');
 
-describe('lib', function () {
-	describe('Trader', function () {
-		describe('computeProfit', function () {
-			it('should compute profit for one stock', function () {
+describe('lib', () => {
+	describe('Trader', () => {
+		describe('computeProfit', () => {
+			it('should compute profit for one stock', () => {
 				const trader = new Trader();
 				trader.buy('GOOGL', 352, 975.22, 343.27744, new Date());
 				trader.buy('GOOGL', 253, 1075.22, 272.03066, new Date());
@@ -15,7 +15,7 @@ describe('lib', function () {
 				trader.computeProfit().valueOf().should.be.equal('49044.0588');
 			});
 
-			it('should compute profit for more than one stock', function () {
+			it('should compute profit for more than one stock', () => {
 				const trader = new Trader();
 				trader.buy('GOOGL', 352, 975.22, 343.27744, new Date());
 				trader.buy('GOOGL', 253, 1075.22, 272.03066, new Date());

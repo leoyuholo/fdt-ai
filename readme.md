@@ -28,11 +28,11 @@ If output file option is not provided, it will write to `stdout` instead.
 ## Example usage
 In the project directory,
 ```
-./index.js < ./testcases/0/in > ./testcases0.out
+./index.js < ./testcases/basic/in > ./testcases0.out
 ```
 is equivalent to
 ```
-./index.js -i ./testcases/0/in -o ./testcases0.out
+./index.js -i ./testcases/basic/in -o ./testcases0.out
 ```
 
 ## Example input

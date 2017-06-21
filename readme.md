@@ -46,7 +46,10 @@ OrderId	Trader	StkCode	Quantity	Price	TradeType	Fee	Timestamp
 5	BBB	333333	400	9.2	Buy	0.8	2016-05-16 10:28:24
 6	AAA	555555	600	15.5	Buy	2.0	2016-05-16 10:31:33
 ```
+## Example output
+
 And output TSV as well, but without header column:
+
 ```
 AAA	96.48
 BBB	-252.96

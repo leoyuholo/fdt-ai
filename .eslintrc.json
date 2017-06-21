@@ -12,7 +12,7 @@
       "comma-dangle": ["error", "never"],
       "curly": ["error", "multi"],
       "func-names": 0,
-      "max-len": ["warn", 100],
+      "max-len": ["warn", 200],
       "no-console": ["error", { "allow" : ["warn", "error"] }]
     }
 }

@@ -3,7 +3,7 @@
   "description": "FDT AI coding test for software engineer",
   "scripts": {
     "dev": "nodemon index.js -- -i testcases/0/in",
-    "lint": "eslint lib test",
+    "lint": "eslint lib test index.js",
     "test": "mocha",
     "test-watch": "nodemon --exec npm run test --watch .",
     "coverage": "nyc --reporter=lcov mocha"

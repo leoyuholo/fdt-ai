@@ -15,7 +15,7 @@ const file = chaiFiles.file;
 const realizedProfit = require('../lib/realizedProfit');
 
 describe('lib', () => {
-	describe.skip('realizedProfit', function () {
+	describe('realizedProfit', function () {
 		this.timeout(100000);
 		describe('testcases', () => {
 			const testcases = fs.readdirSync(path.join(__dirname, '../testcases'));

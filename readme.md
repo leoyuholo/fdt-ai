@@ -25,7 +25,7 @@ If input file option is not provided, it will read from `stdin` instead.
 
 If output file option is not provided, it will write to `stdout` instead.
 
-## Example
+## Example usage
 In the project directory,
 ```
 ./index.js < ./testcases/0/in > ./testcases0.out

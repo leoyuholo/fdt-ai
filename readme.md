@@ -1,8 +1,6 @@
 # FDT AI coding test
 [![Build Status](https://travis-ci.org/leoyuholo/fdt-ai.svg?branch=master)](https://travis-ci.org/leoyuholo/fdt-ai)
-[![Code Climate](https://codeclimate.com/github/leoyuholo/fdt-ai/badges/gpa.svg)](https://codeclimate.com/github/leoyuholo/fdt-ai)
 [![Test Coverage](https://codeclimate.com/github/leoyuholo/fdt-ai/badges/coverage.svg)](https://codeclimate.com/github/leoyuholo/fdt-ai/coverage)
-[![Issue Count](https://codeclimate.com/github/leoyuholo/fdt-ai/badges/issue_count.svg)](https://codeclimate.com/github/leoyuholo/fdt-ai)
 
 ## Usage
 **Prerequisite**: Need to have [Node.js](https://nodejs.org/en/) installed on system.

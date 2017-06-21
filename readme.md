@@ -53,6 +53,12 @@ AAA	96.48
 BBB	-252.96
 ```
 
+## Assumptions
+1. Quantity must be positive integers.
+2. When two traders have same profit(loss), tie break with alphabetical order of trader id.
+3. Input are sorted in ascending order of OrderId.
+4. OrderId is unique and determines the order sequence. An order with smaller OrderId than another order means the former arrives earlier than the latter, and should be processed first.
+
 ## Development
 You can utilize the scripts in `package.json` to further develop this project.
 

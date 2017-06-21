@@ -63,3 +63,7 @@ You can utilize the scripts in `package.json` to further develop this project.
 - To run coverage, run `npm run coverage` and check the generated `coverage/lcov-report` directory.
 - To watch file changes and restart automatically, run `npm run dev`
 - To watch file changes and run test automatically, run `npm run test-watch`
+
+To avoid inconsistent development environment, you are recommended to do development with [docker](https://store.docker.com/editions/community/docker-ce-server-ubuntu/plans/docker-ce-server-ubuntu-tier?tab=instructions) and [docker-compose](https://docs.docker.com/compose/install/) on Ubuntu.
+
+To start development, simplily run `docker-compose up` to spin up the development environment. You may edit `docker-compose.yaml` to run different scripts.
